@@ -1,5 +1,7 @@
 <h1><center> Array</center></h1>
+
 ## 1. Definition:
+
 > A fixed or dynamic container containing n elements **indexable** from range (0, n-1)
 
 ## 2. When to used:
