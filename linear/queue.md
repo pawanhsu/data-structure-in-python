@@ -1,32 +1,31 @@
-<h1><center> Stack</center></h1>
+<h1><center> Queue</center></h1>
 ## 1. Definition:
-> A stack is an one-ended linear data structure which models a real world stack (first in last out) by having two primary operation, namely "push" and "pop"
+> A Queue is a linear data structure which models a real world queue by having 2 primary operation, namely "enqueue" and "dequque"
 
 ## 2. When to used:
-> 1. Used by "Undo" something such as the undo in text editors.
-> 2. Used in compiler syntax checking for matching brackets etc..
-> 3. Depth first search
+> 1. Any waiting line models a queue(FIFO). (movie theatre, web server request waiting queue)
+> 2. Breadth first search
 
 ## 3. Complexity
-| Operation  |Time Complexity   | 
+| Operation  |time complexity  |  
 |---|---|
-|Pushing   | O(1)  |
-|Poping  | O(1)  |
-|Peeping   |O(1) |
-|Size   | O(1)  |
-|Searching| O(N) |
-|IsEmpty   | O(1)  |
+|Enqueue   | O(1)  |
+|Dequeue   | O(1)  | 
+|Peek   | O(1)  |
+|Search   | O(N) |
+|Is_empty   | O(1)  |
 
 ## 4. Implementation
 
-> A Stack can be implemented mostly by array or linked list.
+> A Queue can be implemented mostly by array or linked list.
 > 
-> * noted: if implemented by static array, we need to handle the overflow issue.
+> * noted that if implemented by fixed size array, we should handle the overflow issue.
 
 
-
+## 5. Usage
 ```
 class Stack:
+
     def __init__(self, x=None):
         self.arr = []
         self.size = 0
@@ -57,7 +56,6 @@ class Stack:
     
     def is_empty(self):
         return True if not self.size else False
-        
 ```
 ```
 class Node:
@@ -106,5 +104,4 @@ class LinkedListStack:
     
     def is_empty(self):
         return True if self.head is None else False
-    
 ```
